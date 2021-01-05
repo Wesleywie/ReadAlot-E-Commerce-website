@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="ReadalotService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:60943/ReadalotService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:60943/ReadalotService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:60943/ReadalotService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Readalot_Service" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IReadalotService_UserExists_InputMessage">
+    <wsdl:part name="parameters" element="tns:UserExists" />
+  </wsdl:message>
+  <wsdl:message name="IReadalotService_UserExists_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UserExistsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReadalotService_PasswordMatcher_InputMessage">
+    <wsdl:part name="parameters" element="tns:PasswordMatcher" />
+  </wsdl:message>
+  <wsdl:message name="IReadalotService_PasswordMatcher_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PasswordMatcherResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReadalotService_Register_InputMessage">
+    <wsdl:part name="parameters" element="tns:Register" />
+  </wsdl:message>
+  <wsdl:message name="IReadalotService_Register_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RegisterResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReadalotService_getUserInfoByEmail_InputMessage">
+    <wsdl:part name="parameters" element="tns:getUserInfoByEmail" />
+  </wsdl:message>
+  <wsdl:message name="IReadalotService_getUserInfoByEmail_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getUserInfoByEmailResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReadalotService_registerAdmin_InputMessage">
+    <wsdl:part name="parameters" element="tns:registerAdmin" />
+  </wsdl:message>
+  <wsdl:message name="IReadalotService_registerAdmin_OutputMessage">
+    <wsdl:part name="parameters" element="tns:registerAdminResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReadalotService_deleteUserByEmail_InputMessage">
+    <wsdl:part name="parameters" element="tns:deleteUserByEmail" />
+  </wsdl:message>
+  <wsdl:message name="IReadalotService_deleteUserByEmail_OutputMessage">
+    <wsdl:part name="parameters" element="tns:deleteUserByEmailResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReadalotService_getAllUsers_InputMessage">
+    <wsdl:part name="parameters" element="tns:getAllUsers" />
+  </wsdl:message>
+  <wsdl:message name="IReadalotService_getAllUsers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getAllUsersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReadalotService_addNewProduct_InputMessage">
+    <wsdl:part name="parameters" element="tns:addNewProduct" />
+  </wsdl:message>
+  <wsdl:message name="IReadalotService_addNewProduct_OutputMessage">
+    <wsdl:part name="parameters" element="tns:addNewProductResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReadalotService_deleteProductByISBN_InputMessage">
+    <wsdl:part name="parameters" element="tns:deleteProductByISBN" />
+  </wsdl:message>
+  <wsdl:message name="IReadalotService_deleteProductByISBN_OutputMessage">
+    <wsdl:part name="parameters" element="tns:deleteProductByISBNResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReadalotService_deleteProductByTitle_InputMessage">
+    <wsdl:part name="parameters" element="tns:deleteProductByTitle" />
+  </wsdl:message>
+  <wsdl:message name="IReadalotService_deleteProductByTitle_OutputMessage">
+    <wsdl:part name="parameters" element="tns:deleteProductByTitleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReadalotService_getProductByISBN_InputMessage">
+    <wsdl:part name="parameters" element="tns:getProductByISBN" />
+  </wsdl:message>
+  <wsdl:message name="IReadalotService_getProductByISBN_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getProductByISBNResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReadalotService_getProductByTitle_InputMessage">
+    <wsdl:part name="parameters" element="tns:getProductByTitle" />
+  </wsdl:message>
+  <wsdl:message name="IReadalotService_getProductByTitle_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getProductByTitleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReadalotService_getProductByAuthor_InputMessage">
+    <wsdl:part name="parameters" element="tns:getProductByAuthor" />
+  </wsdl:message>
+  <wsdl:message name="IReadalotService_getProductByAuthor_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getProductByAuthorResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReadalotService_getAllProducts_InputMessage">
+    <wsdl:part name="parameters" element="tns:getAllProducts" />
+  </wsdl:message>
+  <wsdl:message name="IReadalotService_getAllProducts_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getAllProductsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReadalotService_getProductByCat_InputMessage">
+    <wsdl:part name="parameters" element="tns:getProductByCat" />
+  </wsdl:message>
+  <wsdl:message name="IReadalotService_getProductByCat_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getProductByCatResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReadalotService_getBook_InputMessage">
+    <wsdl:part name="parameters" element="tns:getBook" />
+  </wsdl:message>
+  <wsdl:message name="IReadalotService_getBook_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getBookResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReadalotService_getProductByfilter_InputMessage">
+    <wsdl:part name="parameters" element="tns:getProductByfilter" />
+  </wsdl:message>
+  <wsdl:message name="IReadalotService_getProductByfilter_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getProductByfilterResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IReadalotService">
+    <wsdl:operation name="UserExists">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReadalotService/UserExists" message="tns:IReadalotService_UserExists_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReadalotService/UserExistsResponse" message="tns:IReadalotService_UserExists_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PasswordMatcher">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReadalotService/PasswordMatcher" message="tns:IReadalotService_PasswordMatcher_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReadalotService/PasswordMatcherResponse" message="tns:IReadalotService_PasswordMatcher_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Register">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReadalotService/Register" message="tns:IReadalotService_Register_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReadalotService/RegisterResponse" message="tns:IReadalotService_Register_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getUserInfoByEmail">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReadalotService/getUserInfoByEmail" message="tns:IReadalotService_getUserInfoByEmail_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReadalotService/getUserInfoByEmailResponse" message="tns:IReadalotService_getUserInfoByEmail_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="registerAdmin">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReadalotService/registerAdmin" message="tns:IReadalotService_registerAdmin_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReadalotService/registerAdminResponse" message="tns:IReadalotService_registerAdmin_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="deleteUserByEmail">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReadalotService/deleteUserByEmail" message="tns:IReadalotService_deleteUserByEmail_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReadalotService/deleteUserByEmailResponse" message="tns:IReadalotService_deleteUserByEmail_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getAllUsers">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReadalotService/getAllUsers" message="tns:IReadalotService_getAllUsers_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReadalotService/getAllUsersResponse" message="tns:IReadalotService_getAllUsers_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="addNewProduct">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReadalotService/addNewProduct" message="tns:IReadalotService_addNewProduct_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReadalotService/addNewProductResponse" message="tns:IReadalotService_addNewProduct_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="deleteProductByISBN">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReadalotService/deleteProductByISBN" message="tns:IReadalotService_deleteProductByISBN_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReadalotService/deleteProductByISBNResponse" message="tns:IReadalotService_deleteProductByISBN_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="deleteProductByTitle">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReadalotService/deleteProductByTitle" message="tns:IReadalotService_deleteProductByTitle_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReadalotService/deleteProductByTitleResponse" message="tns:IReadalotService_deleteProductByTitle_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getProductByISBN">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReadalotService/getProductByISBN" message="tns:IReadalotService_getProductByISBN_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReadalotService/getProductByISBNResponse" message="tns:IReadalotService_getProductByISBN_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getProductByTitle">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReadalotService/getProductByTitle" message="tns:IReadalotService_getProductByTitle_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReadalotService/getProductByTitleResponse" message="tns:IReadalotService_getProductByTitle_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getProductByAuthor">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReadalotService/getProductByAuthor" message="tns:IReadalotService_getProductByAuthor_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReadalotService/getProductByAuthorResponse" message="tns:IReadalotService_getProductByAuthor_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getAllProducts">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReadalotService/getAllProducts" message="tns:IReadalotService_getAllProducts_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReadalotService/getAllProductsResponse" message="tns:IReadalotService_getAllProducts_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getProductByCat">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReadalotService/getProductByCat" message="tns:IReadalotService_getProductByCat_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReadalotService/getProductByCatResponse" message="tns:IReadalotService_getProductByCat_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getBook">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReadalotService/getBook" message="tns:IReadalotService_getBook_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReadalotService/getBookResponse" message="tns:IReadalotService_getBook_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getProductByfilter">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReadalotService/getProductByfilter" message="tns:IReadalotService_getProductByfilter_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReadalotService/getProductByfilterResponse" message="tns:IReadalotService_getProductByfilter_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IReadalotService" type="tns:IReadalotService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="UserExists">
+      <soap:operation soapAction="http://tempuri.org/IReadalotService/UserExists" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PasswordMatcher">
+      <soap:operation soapAction="http://tempuri.org/IReadalotService/PasswordMatcher" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Register">
+      <soap:operation soapAction="http://tempuri.org/IReadalotService/Register" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getUserInfoByEmail">
+      <soap:operation soapAction="http://tempuri.org/IReadalotService/getUserInfoByEmail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="registerAdmin">
+      <soap:operation soapAction="http://tempuri.org/IReadalotService/registerAdmin" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteUserByEmail">
+      <soap:operation soapAction="http://tempuri.org/IReadalotService/deleteUserByEmail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAllUsers">
+      <soap:operation soapAction="http://tempuri.org/IReadalotService/getAllUsers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addNewProduct">
+      <soap:operation soapAction="http://tempuri.org/IReadalotService/addNewProduct" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteProductByISBN">
+      <soap:operation soapAction="http://tempuri.org/IReadalotService/deleteProductByISBN" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteProductByTitle">
+      <soap:operation soapAction="http://tempuri.org/IReadalotService/deleteProductByTitle" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getProductByISBN">
+      <soap:operation soapAction="http://tempuri.org/IReadalotService/getProductByISBN" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getProductByTitle">
+      <soap:operation soapAction="http://tempuri.org/IReadalotService/getProductByTitle" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getProductByAuthor">
+      <soap:operation soapAction="http://tempuri.org/IReadalotService/getProductByAuthor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAllProducts">
+      <soap:operation soapAction="http://tempuri.org/IReadalotService/getAllProducts" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getProductByCat">
+      <soap:operation soapAction="http://tempuri.org/IReadalotService/getProductByCat" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getBook">
+      <soap:operation soapAction="http://tempuri.org/IReadalotService/getBook" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getProductByfilter">
+      <soap:operation soapAction="http://tempuri.org/IReadalotService/getProductByfilter" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ReadalotService">
+    <wsdl:port name="BasicHttpBinding_IReadalotService" binding="tns:BasicHttpBinding_IReadalotService">
+      <soap:address location="http://localhost:60943/ReadalotService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

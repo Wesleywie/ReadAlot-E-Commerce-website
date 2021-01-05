@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Readalot_Service" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Readalot_Service" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="User">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="E_Mail" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="F_Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Invoices" nillable="true" type="tns:ArrayOfInvoice" />
+      <xs:element minOccurs="0" name="L_Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Temp_Shopping_Cart" nillable="true" type="tns:Temp_Shopping_Cart" />
+      <xs:element minOccurs="0" name="Title" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="User_ID" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="User" nillable="true" type="tns:User" />
+  <xs:complexType name="ArrayOfInvoice">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Invoice" nillable="true" type="tns:Invoice" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfInvoice" nillable="true" type="tns:ArrayOfInvoice" />
+  <xs:complexType name="Invoice">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Invoice_Date" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Invoice_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="Invoice_Items" nillable="true" type="tns:ArrayOfInvoice_Item" />
+      <xs:element minOccurs="0" name="Shipping_Address" nillable="true" type="tns:Shipping_Address" />
+      <xs:element minOccurs="0" name="User" nillable="true" type="tns:User" />
+      <xs:element minOccurs="0" name="User_ID" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Invoice" nillable="true" type="tns:Invoice" />
+  <xs:complexType name="ArrayOfInvoice_Item">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Invoice_Item" nillable="true" type="tns:Invoice_Item" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfInvoice_Item" nillable="true" type="tns:ArrayOfInvoice_Item" />
+  <xs:complexType name="Invoice_Item">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Book_ISBN" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Invoice" nillable="true" type="tns:Invoice" />
+      <xs:element minOccurs="0" name="Invoice_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="Line_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="Quantity" type="xs:int" />
+      <xs:element minOccurs="0" name="TextBook" nillable="true" type="tns:TextBook" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Invoice_Item" nillable="true" type="tns:Invoice_Item" />
+  <xs:complexType name="TextBook">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Book_Author" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Book_Category" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Book_Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Book_ISBN" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Book_ImageSource" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Book_Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Book_Price" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Book_Quantity" type="xs:int" />
+      <xs:element minOccurs="0" name="Invoice_Items" nillable="true" type="tns:ArrayOfInvoice_Item" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TextBook" nillable="true" type="tns:TextBook" />
+  <xs:complexType name="Shipping_Address">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="City" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Invoice" nillable="true" type="tns:Invoice" />
+      <xs:element minOccurs="0" name="Invoice_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="Province" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Street" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Zip_Code" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Shipping_Address" nillable="true" type="tns:Shipping_Address" />
+  <xs:complexType name="Temp_Shopping_Cart">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Book_ISBN" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Item_Price" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Quantity" type="xs:int" />
+      <xs:element minOccurs="0" name="Total_Price" type="xs:decimal" />
+      <xs:element minOccurs="0" name="User" nillable="true" type="tns:User" />
+      <xs:element minOccurs="0" name="User_ID" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Temp_Shopping_Cart" nillable="true" type="tns:Temp_Shopping_Cart" />
+  <xs:complexType name="ArrayOfUser">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="User" nillable="true" type="tns:User" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfUser" nillable="true" type="tns:ArrayOfUser" />
+  <xs:complexType name="ArrayOfTextBook">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TextBook" nillable="true" type="tns:TextBook" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTextBook" nillable="true" type="tns:ArrayOfTextBook" />
+</xs:schema>

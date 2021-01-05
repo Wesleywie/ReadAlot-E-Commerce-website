@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="ReadalotDataClasses">
+  <DataContextMoniker Name="/ReadalotDataClassesDataContext" />
+  <nestedChildShapes>
+    <classShape Id="b3b5d834-1e7a-4a31-9452-b3d05d58b11f" absoluteBounds="3.5, 4.25, 2, 1.3862939453125005">
+      <DataClassMoniker Name="/ReadalotDataClassesDataContext/Invoice" />
+      <nestedChildShapes>
+        <elementListCompartment Id="fad18cc4-9c47-42e1-b2e8-1ac138b5f9f7" absoluteBounds="3.515, 4.71, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="6c99153e-2843-4c99-be37-58639dd77cd6" absoluteBounds="6.25, 3.125, 2, 1.578595377604167">
+      <DataClassMoniker Name="/ReadalotDataClassesDataContext/Invoice_Item" />
+      <nestedChildShapes>
+        <elementListCompartment Id="1ab03bf8-9230-421a-b9d2-1846bbab4873" absoluteBounds="6.265, 3.585, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="b979145f-407f-43bc-a6bf-ec0e70a68e9a" absoluteBounds="6.25, 6.25, 2, 1.9631982421875005">
+      <DataClassMoniker Name="/ReadalotDataClassesDataContext/Shipping_Address" />
+      <nestedChildShapes>
+        <elementListCompartment Id="29413d9a-091e-45a4-8a51-b89f3e1326f0" absoluteBounds="6.265, 6.71, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="a3e9bd9f-aef3-4ae8-9e01-2fd9c3ff67e7" absoluteBounds="3.5, 0.75, 2, 2.3478011067708335">
+      <DataClassMoniker Name="/ReadalotDataClassesDataContext/TextBook" />
+      <nestedChildShapes>
+        <elementListCompartment Id="67d7c181-fb10-4078-b573-d470eab2f45f" absoluteBounds="3.515, 1.21, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="16f59463-667f-472c-85ca-c2b2b41caf0f" absoluteBounds="0.75, 3.875, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/ReadalotDataClassesDataContext/User" />
+      <nestedChildShapes>
+        <elementListCompartment Id="65ebceac-0944-4466-b951-47c2d082dc56" absoluteBounds="0.765, 4.335, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(5.5 : 4.47679768880208); (6.25 : 4.47679768880208)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/ReadalotDataClassesDataContext/Invoice/Invoice_Invoice_Item" />
+      <nodes>
+        <classShapeMoniker Id="b3b5d834-1e7a-4a31-9452-b3d05d58b11f" />
+        <classShapeMoniker Id="6c99153e-2843-4c99-be37-58639dd77cd6" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(4.5 : 5.6362939453125); (4.5 : 7.23159912109375); (6.25 : 7.23159912109375)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/ReadalotDataClassesDataContext/Invoice/Invoice_Shipping_Address" />
+      <nodes>
+        <classShapeMoniker Id="b3b5d834-1e7a-4a31-9452-b3d05d58b11f" />
+        <classShapeMoniker Id="b979145f-407f-43bc-a6bf-ec0e70a68e9a" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 1.92390055338542); (7.25 : 1.92390055338542); (7.25 : 3.125)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/ReadalotDataClassesDataContext/TextBook/TextBook_Invoice_Item" />
+      <nodes>
+        <classShapeMoniker Id="a3e9bd9f-aef3-4ae8-9e01-2fd9c3ff67e7" />
+        <classShapeMoniker Id="6c99153e-2843-4c99-be37-58639dd77cd6" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 4.94314697265625); (3.5 : 4.94314697265625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/ReadalotDataClassesDataContext/User/User_Invoice" />
+      <nodes>
+        <classShapeMoniker Id="16f59463-667f-472c-85ca-c2b2b41caf0f" />
+        <classShapeMoniker Id="b3b5d834-1e7a-4a31-9452-b3d05d58b11f" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

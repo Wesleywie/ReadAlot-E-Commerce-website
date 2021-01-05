@@ -1,0 +1,14 @@
+C:\Users\User\Desktop\School\Informatics\Informatics 2B\pracs\Group Work\Readalot_Latest\Readalot_Service\obj\Debug\Readalot_Service.csprojAssemblyReference.cache
+C:\Users\User\Desktop\School\Informatics\Informatics 2B\pracs\Group Work\Readalot_Latest\Readalot_Service\obj\Debug\Readalot_Service.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\School\Informatics\Informatics 2B\pracs\Group Work\Readalot_Latest\Readalot_Service\bin\Readalot_Service.dll.config
+C:\Users\User\Desktop\School\Informatics\Informatics 2B\pracs\Group Work\Readalot_Latest\Readalot_Service\bin\Readalot_Service.dll
+C:\Users\User\Desktop\School\Informatics\Informatics 2B\pracs\Group Work\Readalot_Latest\Readalot_Service\bin\Readalot_Service.pdb
+C:\Users\User\Desktop\School\Informatics\Informatics 2B\pracs\Group Work\Readalot_Latest\Readalot_Service\obj\Debug\Readalot_Service.dll
+C:\Users\User\Desktop\School\Informatics\Informatics 2B\pracs\Group Work\Readalot_Latest\Readalot_Service\obj\Debug\Readalot_Service.pdb
+C:\Users\wesle\Desktop\Readalot_Latest\Readalot_Service\bin\Readalot_Service.dll.config
+C:\Users\wesle\Desktop\Readalot_Latest\Readalot_Service\bin\Readalot_Service.dll
+C:\Users\wesle\Desktop\Readalot_Latest\Readalot_Service\bin\Readalot_Service.pdb
+C:\Users\wesle\Desktop\Readalot_Latest\Readalot_Service\obj\Debug\Readalot_Service.csprojAssemblyReference.cache
+C:\Users\wesle\Desktop\Readalot_Latest\Readalot_Service\obj\Debug\Readalot_Service.csproj.CoreCompileInputs.cache
+C:\Users\wesle\Desktop\Readalot_Latest\Readalot_Service\obj\Debug\Readalot_Service.dll
+C:\Users\wesle\Desktop\Readalot_Latest\Readalot_Service\obj\Debug\Readalot_Service.pdb

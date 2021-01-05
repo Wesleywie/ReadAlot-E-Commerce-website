@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="1b3a67e1-b02b-4167-8abe-1bd5157883e2" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:60943/ReadalotService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="ReadalotService.xsd" MetadataType="Schema" ID="48288ab6-f13c-41f0-b18f-ca299713b98a" SourceId="1" SourceUrl="http://localhost:60943/ReadalotService.svc?xsd=xsd2" />
+    <MetadataFile FileName="ReadalotService1.xsd" MetadataType="Schema" ID="123342c0-605a-4254-bb2b-52e3544ce264" SourceId="1" SourceUrl="http://localhost:60943/ReadalotService.svc?xsd=xsd0" />
+    <MetadataFile FileName="ReadalotService.disco" MetadataType="Disco" ID="64e00bb6-1760-44ff-ace5-d041b79eb1b5" SourceId="1" SourceUrl="http://localhost:60943/ReadalotService.svc?disco" />
+    <MetadataFile FileName="ReadalotService.wsdl" MetadataType="Wsdl" ID="e0a23c9e-c066-4bc8-b8c8-491d5d5a3ae8" SourceId="1" SourceUrl="http://localhost:60943/ReadalotService.svc?wsdl" />
+    <MetadataFile FileName="ReadalotService2.xsd" MetadataType="Schema" ID="b8f70898-43ad-4f60-918d-bd3b0031a7da" SourceId="1" SourceUrl="http://localhost:60943/ReadalotService.svc?xsd=xsd1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

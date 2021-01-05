@@ -1,0 +1,63 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="ReadalotMasterPage.master.cs" Inherits="Readalot_Latest.ReadalotMasterPage" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+
+  <title>Readalot</title>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=9" />
+  <link rel="stylesheet" type="text/css" href="css/style.css" />
+  <script type="text/javascript" src="js/jquery.min.js"></script>
+  <script type="text/javascript" src="js/image_slide.js"></script>
+
+    <style>
+        .navi{
+            width: 100%;
+        }
+    </style>
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+</head>
+<body>
+    
+
+    <div id="main">
+    <div id="header">
+	  <div id="banner" style="background:black" class="navi">
+	    <div id="welcome">
+	      <h1>Readalot</h1>
+	    </div><!--close welcome-->
+
+	    <div id="menubar"">
+          <ul id="menu">
+            <li><a href="Home.aspx" id="btnHome" runat="server"  visible="true">Home</a></li>
+            <li><a href="UserManagement.aspx" id="btnUserMan" runat="server"  visible="false">User Managment</a></li>
+            <li><a href="ProductManagement.aspx" id="btnProductMan" runat="server"  visible="false">Product Managment</a></li>
+            <li><a href="Explore.aspx" id="btnExploreNav" runat="server" visible="true">Explore</a></li>
+            <li><a href="ShoppingCart.aspx" id="btnShoppingCart" runat="server" visible="false">Shopping Cart</a></li>
+            <li><a href="Login.aspx" id="btnLogin" runat="server"  visible="true">Login</a></li>
+            <li><a href="Register.aspx" id="btnRegister" runat="server"  visible="true">Register</a></li>
+            <li><a href="Logout.aspx" id="btnLogout" runat="server" visible="false">Logout</a></li>
+          </ul>
+        </div><!--close menubar-->	  
+	  </div><!--close banner-->	
+    </div><!--close header-->	
+   </div><!--close main-->
+
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        <div id="footer">
+	  <div id="footBanner" style="background:black">
+	    <div id="conclusion">
+	      <p>Created by AlgoCodeIT</p>
+	    </div><!--close conclusion--> 
+	  </div><!--close footBanner-->	
+    </div><!--close header-->
+
+</body>
+</html>
+
